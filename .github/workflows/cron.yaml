@@ -1,0 +1,16 @@
+on:
+  push:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch: # on-demand/manual trigger
+jobs:
+  job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          cp stub.md README.md
+          gh repo list PatMyron --limit 100 --source --json name -q '.[].name' --visibility public | xargs -I {} sh -c "printf '{} ' && curl -I -k -s 'https://api.github.com/repos/PatMyron/{}/commits?per_page=1' | sed -n '/^[Ll]ink:/ s/.*page=\([0-9]*\).*/\1\+/p'" | sort -nr -k 2 | head -n 6 | sed 's|.*|* https://github.com/PatMyron/&|' >> README.md
+        env:
+          GH_TOKEN: ${{ github.token }}
+      - uses: peter-evans/create-pull-request@v6
