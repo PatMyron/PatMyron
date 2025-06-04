@@ -1,7 +1,7 @@
 on:
   push:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 0 1 6,12 *'
   workflow_dispatch: # on-demand/manual trigger
 jobs:
   job:
