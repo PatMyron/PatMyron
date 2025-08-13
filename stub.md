@@ -9,4 +9,4 @@ Most committed non-`PatMyron/` repos:
 * https://github.com/cloudtools/troposphere 29+
 * https://github.com/aws/aws-cdk 18+
 
-Most committed `PatMyron/` repos:
+Most committed public `PatMyron/` repos:
