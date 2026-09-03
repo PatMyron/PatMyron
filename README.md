@@ -11,7 +11,7 @@ Most committed non-`PatMyron/` repos:
 
 Most committed public `PatMyron/` repos:
 * https://github.com/PatMyron/wpial 457+
-* https://github.com/PatMyron/patmyron.github.io 380+
+* https://github.com/PatMyron/patmyron.github.io 382+
 * https://github.com/PatMyron/Blackbox 223+
 * https://github.com/PatMyron/dotfiles 156+
 * https://github.com/PatMyron/advent-of-code 143+
